@@ -1,0 +1,62 @@
+header {
+  display: block;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+header > a {
+  font-size: 3.5rem;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+nav {
+  text-align: center;
+}
+
+nav > div {
+   display: inline-block;
+  width: 150px;
+}
+
+nav > div > a {
+  text-decoration: none;
+  color: black;
+  font-weight:bold;
+}
+
+nav > div :hover {
+  color: red;
+}
+
+body > aside {
+  
+  margin: 30px 150px;  
+  display: block;
+  
+}
+
+body > aside > div > img {
+   transition: transform .5s; 
+   transform:scale(1.0);  
+  width: 350px;
+  height: 450px;
+}
+body > aside > div > img:hover {
+  transform:scale(1.1);
+  transition: transform .5s;
+  opacity : 0.7;
+  filter: brightness(70%);
+}
+.object {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  text-align: center;
+  top: 210px;
+  /* visibility: hidden; */
+  font-weight: bold;
+  background-color: red;
+}
