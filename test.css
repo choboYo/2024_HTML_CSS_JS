@@ -1,3 +1,14 @@
+body, ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 header {
   display: block;
   text-align: center;
@@ -12,21 +23,28 @@ header > a {
 }
 
 nav {
+  display: block;
   text-align: center;
 }
 
-nav > div {
+nav > ul {
    display: inline-block;
-  width: 150px;
+
+  }
+
+
+nav > ul > li {
+  display: inline-block;
+  /* border: 3px solid black; */
 }
 
-nav > div > a {
-  text-decoration: none;
-  color: black;
+nav > ul > li > a {
+  display: block;
+  padding: 0 20px;
   font-weight:bold;
 }
 
-nav > div :hover {
+nav > ul > li :hover {
   color: red;
 }
 
@@ -37,26 +55,38 @@ body > aside {
   
 }
 
+body > aside > .imgTable {
+  position: relative;
+}
+
 body > aside > div > img {
    transition: transform .5s; 
    transform:scale(1.0);  
   width: 350px;
   height: 450px;
+  cursor: pointer;
 }
-body > aside > div > img:hover {
+
+body > aside > div > img:hover  {
   transform:scale(1.1);
   transition: transform .5s;
   opacity : 0.7;
-  filter: brightness(70%);
+  filter: brightness(40%);
+
 }
+
 .object {
   display: inline-block;
-  width: 200px;
-  height: 200px;
-  position: absolute;
   text-align: center;
-  top: 210px;
-  /* visibility: hidden; */
+  display: none;
   font-weight: bold;
-  background-color: red;
+  position: absolute;
+  left: 35px;
+  top: 70px;
+}
+
+.imgTable:hover .object {
+  display: block;
+  color:white;
+
 }
