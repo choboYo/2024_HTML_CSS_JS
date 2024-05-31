@@ -52,14 +52,18 @@ body > aside {
   
   margin: 30px 150px;  
   display: block;
+  /* border: 3px solid black; */
   
 }
 
 body > aside > .imgTable {
   position: relative;
+  /* border: 3px solid yellow; */
+  width: 350px;
+  height: 450px;
 }
 
-body > aside > div > img {
+body > aside > .imgTable > img {
    transition: transform .5s; 
    transform:scale(1.0);  
   width: 350px;
@@ -67,7 +71,7 @@ body > aside > div > img {
   cursor: pointer;
 }
 
-body > aside > div > img:hover  {
+body > aside > .imgTable > img:hover  {
   transform:scale(1.1);
   transition: transform .5s;
   opacity : 0.7;
@@ -77,16 +81,24 @@ body > aside > div > img:hover  {
 
 .object {
   display: inline-block;
+  /* border: 2px solid red; */
   text-align: center;
   display: none;
   font-weight: bold;
   position: absolute;
   left: 35px;
-  top: 70px;
+  top: 75px;
+  
 }
 
-.imgTable:hover .object {
+.imgTable:hover > .object{
   display: block;
   color:white;
 
+}
+
+.object:hover img:has(.imgTable){
+  transform:scale(1.1);
+  opacity : 0.7;
+  filter: brightness(40%);
 }
