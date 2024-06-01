@@ -22,6 +22,14 @@ header > a {
   font-weight: bold;
 }
 
+.topButton {
+  position: fixed;
+  left: 10%;
+  bottom: 10%;
+  scroll-snap-type: mandatory;
+}
+
+
 nav {
   display: block;
   text-align: center;
@@ -57,6 +65,7 @@ body > aside {
 }
 
 body > aside > .imgTable {
+  display: inline-block;
   position: relative;
   /* border: 3px solid yellow; */
   width: 350px;
@@ -65,7 +74,8 @@ body > aside > .imgTable {
 
 body > aside > .imgTable > img {
    transition: transform .5s; 
-   transform:scale(1.0);  
+   transform:scale(1.0);
+   position: absolute;  
   width: 350px;
   height: 450px;
   cursor: pointer;
@@ -76,6 +86,7 @@ body > aside > .imgTable > img:hover  {
   transition: transform .5s;
   opacity : 0.7;
   filter: brightness(40%);
+  z-index: 1;
 
 }
 
@@ -86,19 +97,28 @@ body > aside > .imgTable > img:hover  {
   display: none;
   font-weight: bold;
   position: absolute;
-  left: 35px;
-  top: 75px;
+  left: 35%;
+  top: 25%;
   
 }
 
 .imgTable:hover > .object{
   display: block;
   color:white;
+  position: absolute;
+  z-index: 1;
 
 }
 
-.object:hover img:has(.imgTable){
+.imgTable:nth-child(5),
+.imgTable:nth-child(6),
+.imgTable:nth-child(7) {
+  margin-top: 40px;
+}
+
+/* 
+.object:hover {
   transform:scale(1.1);
   opacity : 0.7;
   filter: brightness(40%);
-}
+} */
