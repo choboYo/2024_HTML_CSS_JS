@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body, ul, li {
   margin: 0;
   padding: 0;
@@ -24,8 +28,13 @@ header > a {
 
 .topButton {
   position: fixed;
-  left: 10%;
+  right: 7%;
   bottom: 10%;
+  
+}
+
+.topButton > a {
+  padding: 10px;
   scroll-snap-type: mandatory;
 }
 
@@ -60,24 +69,29 @@ body > aside {
   
   margin: 30px 150px;  
   display: block;
-  /* border: 3px solid black; */
+  border: 3px solid black;
   
 }
 
 body > aside > .imgTable {
+  margin: 5px auto;
   display: inline-block;
   position: relative;
   /* border: 3px solid yellow; */
-  width: 350px;
+  width: 32%;
   height: 450px;
+  left: 13px;
 }
+
 
 body > aside > .imgTable > img {
    transition: transform .5s; 
    transform:scale(1.0);
-   position: absolute;  
-  width: 350px;
-  height: 450px;
+   /* position: absolute;   */
+   display: block;
+   margin: auto auto;
+  width: 90%;
+  height: 100%;
   cursor: pointer;
 }
 
@@ -97,9 +111,14 @@ body > aside > .imgTable > img:hover  {
   display: none;
   font-weight: bold;
   position: absolute;
-  left: 35%;
+  left: 29%;
   top: 25%;
   
+}
+
+.imgTable:nth-child(1) > .object {
+  margin-left: 27px;
+
 }
 
 .imgTable:hover > .object{
