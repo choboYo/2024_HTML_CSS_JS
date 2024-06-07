@@ -55,7 +55,7 @@ nav {
 
 nav > ul {
   display: inline-block;
-  padding: 0 20px;  
+  /* padding: 0 20px;   */
 }
 
 nav ul {
@@ -73,7 +73,7 @@ nav  ul > li {
 nav ul > li > a {
   /* border: 1px solid black; */
   display: block;
-  padding: 0 20px;
+  /* padding: 0 20px; */
   font-weight:bold;
   white-space: nowrap;
 }
@@ -292,10 +292,6 @@ button {
   right: 100%;
   width: 170px;
   padding: 0px 20px;
-}
-
-.login_bar > .login_menu > ul > li li {
-  
 }
 
 .login_bar > .login_menu  ul > li:hover > ul {
