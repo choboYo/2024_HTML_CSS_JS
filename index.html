@@ -18,11 +18,15 @@
 <button onclick="counts(); bgc_chg();">다크 모드</button>
 
 <div class="modal">
-  <h3>모달 팝업 타이틀 입니다.</h3> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum deserunt corrupti, eveniet repudiandae ex ullam nam ut delectus quod asperiores voluptates reprehenderit consequuntur nobis laudantium laborum voluptatibus soluta, quia obcaecati.
-<button class="close_btn"></button>
+  <div class="modal_body">
+    <h3>모달 팝업 타이틀 입니다.</h3> 
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum deserunt corrupti, eveniet repudiandae ex ullam nam ut delectus quod asperiores voluptates reprehenderit consequuntur nobis laudantium laborum voluptatibus soluta, quia obcaecati.
+    </p>
+    <button class="close_btn">종료</button>
+  </div>
 </div>
 <button class="modal_btn">이 버튼은 모달창을 여는 버튼 입니다.</button>
-<div class="modal_win"></div>
 
 <nav>
   <ul>
@@ -411,6 +415,19 @@
 </div>
 
 <div class="topButton"><a href="#header">▲</a></div>
+
+<script>
+  // 질문: 자바스크립트 펑션을 통한 것만 인식을 하는 건지 
+  // 자바스크립트 페이지에서는 작동이 안하다가 html페이지에서 script로 짜게 되었을때 작동함
+$('.modal_btn').on('click', function() {
+    $('.modal').css('display', 'block');  
+  });
+
+$('.close_btn').on('click', function() {
+    $('.modal').css('display', 'none');  
+  });
+  
+</script>
 </body>
 </html>
 
